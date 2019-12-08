@@ -35,3 +35,8 @@ ptyhon performance.py
 ```
 tensorboard --log = logs/log1 --host=127.0.0.1
 ```
+6.train  
+before traiing,download the data here
+```
+python cnn.py
+```
