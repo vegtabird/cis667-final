@@ -19,8 +19,9 @@ conda create -n tensorflow
 ```
 activate tensorflow
 ```
-2.install tensorflow
-3.start game with ui
+2.install tensorflow   
+  
+3.start game with ui  
 ```
 python game.py
 ```
