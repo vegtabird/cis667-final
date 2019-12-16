@@ -4,6 +4,7 @@ import tkinter
 from tkinter import *
 from cnn import CNN
 import random
+board_size = 7
 class Gamer():
     
     def __init__(self,size,AiMode,cnn):
@@ -183,9 +184,9 @@ class Gamer():
         self.can.bind("<Button-1>",self.human_play)
         self.root.mainloop()
 if __name__ == "__main__":
-    cnn = CNN()
+    cnn = CNN(board_size)
     cnn.restore(".\model\model.ckpt")
-    game = Gamer(11,1,cnn)
+    game = Gamer(board_size,1,cnn)
     print("game start")
     print("each turn will have 0.2 possible to continue play")
     game.game_play_withUi()

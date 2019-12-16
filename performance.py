@@ -1,29 +1,32 @@
 from game import Gamer
-from cnn_2 import CNN
+from cnn import CNN
 import matplotlib.pyplot as plt
 #mode=1 using cnn 
 #mode=2 without cnn
+#size of board should only have one size in the array
 size = [5,6,7,8,9]
 per_game_len = 100
-modelPath = ".\model\model3.ckpt"
+#path to load the trained model
+modelPath = [".\model\m1_5.ckpt",".\model\m1_6.ckpt",".\model\m1_7.ckpt",".\model\m1_8.ckpt",".\model\m1_9.ckpt"]
 mode = 1
 if __name__ == '__main__':
-
     size_list = [str(i)+"*"+str(i)for i in size]
     win_list = []
     node_list = []
     win_without_list = []
     node_without_list=[]
-
-    my_cnn = CNN()
-    my_cnn.restore(modelPath)
-    game = Gamer(size[0],mode,my_cnn)
+    cnn_models = []
+    for s in size:
+        cnn_models.append(CNN(s))
+    for i in range(len(cnn_models)):
+        cnn_models[i].restore(modelPath[i])
     baseline_win = 0
     ai_win = 0
     node = 0
     for i in range(len(size)):
         f = open("./result_with.txt","a")
         f.write("(%d) size\n"%(size[i]))
+        game =Gamer(size[i],mode,cnn_models[i])
         node = 0
         ai_win = 0
         baseline_win=0
@@ -70,7 +73,24 @@ if __name__ == '__main__':
         f.close()  
         win_without_list.append(ai_win)
         node_without_list.append(node)
-    
+    '''
+    plt.figure(1)
+    win_pic = plt.subplot(2,1,1)
+    node_pic = plt.subplot(2,1,2)
+    x_list = [10,12]
+    x_list_1 = [13,14]
+    win_list.append(win_without_list[0])
+    node_list.append(node_without_list[0])
+    plt.sca(win_pic)
+    plt.bar(x_list,win_list,width=1,fc="r",tick_label=["cnn","without cnn"])
+    plt.bar(x_list,win_list,width=1,fc="r",tick_label=["cnn","without cnn"])
+    plt.title("win rate")
+    plt.sca(node_pic)
+    plt.title("efficent/number of node used")
+    plt.bar(x_list,node_list,width=1,tick_label=["cnn","without cnn"],fc="g" )
+    plt.savefig("mode.jpg")
+    plt.show()
+    '''
     plt.figure(1)
     win_pic = plt.subplot(2,1,1)
     node_pic = plt.subplot(2,1,2)
@@ -79,10 +99,12 @@ if __name__ == '__main__':
     plt.sca(win_pic)
     plt.bar(x_list,win_list,width=10,label="cnn",fc="r",tick_label=size_list)
     plt.bar(x1_list,win_without_list,width=10,label="no cnn",fc="y")
+    plt.title("win number in 100 games")
     plt.legend()
     plt.sca(node_pic)
     plt.bar(x_list,node_list,width=10,label="cnn",fc="r" ,tick_label=size_list)
     plt.bar(x1_list,node_without_list,width=10,label="no cnn",fc="y")
+    plt.title("efficiency/number of nodes")
     plt.legend()
     plt.savefig("mode2.jpg")
     plt.show()
