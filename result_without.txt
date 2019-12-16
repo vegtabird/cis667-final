@@ -1,0 +1,20 @@
+(5) size
+ai_without_win:(38) total_round : (99)
+base_win:(62) total_round : (99)
+using node is (429804)
+(6) size
+ai_without_win:(80) total_round : (99)
+base_win:(20) total_round : (99)
+using node is (1173718)
+(7) size
+ai_without_win:(94) total_round : (99)
+base_win:(6) total_round : (99)
+using node is (2818750)
+(8) size
+ai_without_win:(100) total_round : (99)
+base_win:(0) total_round : (99)
+using node is (5046537)
+(9) size
+ai_without_win:(100) total_round : (99)
+base_win:(0) total_round : (99)
+using node is (8464241)

@@ -1,0 +1,20 @@
+(5) size
+result_with:(44) total_round : (99)
+base_win:(56) total_round : (99)
+using node is (165443)
+(6) size
+result_with:(80) total_round : (99)
+base_win:(20) total_round : (99)
+using node is (233180)
+(7) size
+result_with:(92) total_round : (99)
+base_win:(8) total_round : (99)
+using node is (252895)
+(8) size
+result_with:(95) total_round : (99)
+base_win:(5) total_round : (99)
+using node is (268060)
+(9) size
+result_with:(94) total_round : (99)
+base_win:(6) total_round : (99)
+using node is (288680)

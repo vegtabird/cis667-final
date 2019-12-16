@@ -5,6 +5,7 @@ from tkinter import *
 from cnn import CNN
 import random
 board_size = 7
+model_path = ".\model\m1_7.ckpt"
 class Gamer():
     
     def __init__(self,size,AiMode,cnn):
@@ -185,7 +186,7 @@ class Gamer():
         self.root.mainloop()
 if __name__ == "__main__":
     cnn = CNN(board_size)
-    cnn.restore(".\model\model.ckpt")
+    cnn.restore(model_path)
     game = Gamer(board_size,1,cnn)
     print("game start")
     print("each turn will have 0.2 possible to continue play")
