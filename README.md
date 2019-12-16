@@ -26,6 +26,7 @@ activate tensorflow
 python game.py
 ```
 This will show a board to play,the ai always play black first  
+You have a chance to play multi-times in one turn  
 ![image](images/board.PNG)
 
 4.run performance to compare the ai with baseline in 5 different board size,each size play 100 games  
