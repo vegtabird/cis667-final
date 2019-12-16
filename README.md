@@ -33,7 +33,7 @@ ptyhon performance.py
 ```
 5.show train loss  
 ```
-tensorboard --log = logs/log1_5 --host=127.0.0.1
+tensorboard --logdir=logs/log1_5 --host=127.0.0.1
 ```
 6.train  
 before training,download the [data](https://github.com/vegtabird/sgf_data) here  
