@@ -42,4 +42,4 @@ Unzip the downloaded file,there should shave a sgf file folder in the project
 python cnn.py
 ```
 7.citation  
-1.“Deep in MNIST”, http://www.tensorfly.cn/tfdoc/tutorials/mnist_pros.html
+“Deep in MNIST”, http://www.tensorfly.cn/tfdoc/tutorials/mnist_pros.html
