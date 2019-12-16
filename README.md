@@ -37,7 +37,7 @@ tensorboard --log = logs/log1 --host=127.0.0.1
 ```
 6.train  
 before training,download the [data](https://github.com/vegtabird/sgf_data) here  
-Unzip the downloaded file,there should shave a sgf file folder in the project
+Unzip the downloaded file,there should have a file folder named "sgf" in the project
 ```
 python cnn.py
 ```
