@@ -25,9 +25,11 @@ activate tensorflow
 ```
 python game.py
 ```
-This will show a board to play,the ai always play black first
+This will show a board to play,the ai always play black first  
+![image](images/board.PNG)
 
-4.run performance to compare the ai with baseline in 5 different board size,each size play 100 games
+4.run performance to compare the ai with baseline in 5 different board size,each size play 100 games  
+![image](images/performance.png)
 ```
 ptyhon performance.py
 ```
@@ -35,6 +37,7 @@ ptyhon performance.py
 ```
 tensorboard --logdir=logs/log1_5 --host=127.0.0.1
 ```
+![image](images/training.PNG)
 6.train  
 before training,download the [data](https://github.com/vegtabird/sgf_data) here  
 Unzip the downloaded file,there should have a file folder named "sgf" in the project
